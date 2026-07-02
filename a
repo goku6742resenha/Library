@@ -3595,9 +3595,9 @@ getgenv().Library = {
                 return
             end
 
-            for i = 1, 2 do
-                Library:LoadConfig(readfile(Library.Directory .. "/Configs/" .. ConfigText .. ".cfg"))
-            end
+            Library:LoadConfig(
+    readfile(Library.Directory .. "/Configs/" .. ConfigText .. ".cfg")
+)
 
             ConfigHolder:UpdateConfigList()
 
@@ -3642,9 +3642,14 @@ getgenv().Library = {
         Section:AddKeyPicker({Text = "Menu bind", Mode = "Toggle", ShowInList = false, Callback = function(Value)
             Window.SetVisible(Value)
         end})
-        Section:AddToggle({Text = "Watermark", Callback = function(Bool)
-            self.Window.Items.Watermark.Instance.Visible = Bool
-        end})
+        Section:AddToggle({
+    Text = "Watermark",
+    Default = true,
+    Callback = function(Bool)
+        print("Watermark:", Bool)
+        self.Window.Items.Watermark.Instance.Visible = Bool
+    end
+})
         Section:AddToggle({Text = "Mod List", Callback = function(Bool)
             self.Window.Items.ModList.Instance.Visible = Bool
         end})
