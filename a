@@ -3644,18 +3644,28 @@ getgenv().Library = {
         end})
         Section:AddToggle({
     Text = "Watermark",
-    Default = true,
+    Flag = "watermark_toggle",
     Callback = function(Bool)
-        print("Watermark:", Bool)
         self.Window.Items.Watermark.Instance.Visible = Bool
     end
 })
-        Section:AddToggle({Text = "Mod List", Callback = function(Bool)
-            self.Window.Items.ModList.Instance.Visible = Bool
-        end})
-        Section:AddToggle({Text = "Keybind List", Callback = function(Bool)
-            self.Window.Items.KeybindList.Instance.Visible = Bool
-        end})
+
+Section:AddToggle({
+    Text = "Mod List",
+    Flag = "modlist_toggle",
+    Callback = function(Bool)
+        self.Window.Items.ModList.Instance.Visible = Bool
+    end
+})
+
+Section:AddToggle({
+    Text = "Keybind List",
+    Flag = "keybindlist_toggle",
+    Callback = function(Bool)
+        self.Window.Items.KeybindList.Instance.Visible = Bool
+    end
+})
+
 
         ConfigHolder:UpdateConfigList();
     end
