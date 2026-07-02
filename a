@@ -116,16 +116,16 @@ getgenv().Library = {
 
     local Themes = {
         Preset = {
-            ["Accent"] = Color3.fromRGB(255, 182, 193),
-            ["ElementBackground"] = Color3.fromRGB(20, 20, 22),
-            ["SectionBackground"] = Color3.fromRGB(15, 16, 18),
-            ["ElementOutline"] = Color3.fromRGB(25, 25, 29),
-            ["Inline"] = Color3.fromRGB(23, 24, 27),
-            ["Other"] = Color3.fromRGB(24, 24, 24),
-            ["TabButtons"] = Color3.fromRGB(20, 22, 26),
-            ["Unselected"] = Color3.fromRGB(170, 170, 170),
-            ["TextColor"] = Color3.fromRGB(255, 255, 255),
-            ["Background"] = Color3.fromRGB(12, 12, 14),
+            ["Accent"] = Color3.fromRGB(255, 30, 30),
+            ["ElementBackground"] = Color3.fromRGB(0, 0, 0),
+            ["SectionBackground"] = Color3.fromRGB(0, 0, 0),
+            ["ElementOutline"] = Color3.fromRGB(40, 0, 0),
+            ["Inline"] = Color3.fromRGB(0, 0, 0),
+            ["Other"] = Color3.fromRGB(0, 0, 0),
+            ["TabButtons"] = Color3.fromRGB(255, 0, 0),
+            ["Unselected"] = Color3.fromRGB(255, 0, 0),
+            ["TextColor"] = Color3.fromRGB(255, 50, 50),
+            ["Background"] = Color3.fromRGB(0, 0, 0),
             ["Font"] = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
         };
         Utility = {};
